@@ -1,3 +1,1 @@
-# noteAttachment TinyMCE Plugin
-
-Welcome stranger! This is a repo containing the noteAttachment TinyMCE plugin.
+# 一个基于 tinymce 的附件上传插件
