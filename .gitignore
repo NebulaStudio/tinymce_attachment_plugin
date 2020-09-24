@@ -12,3 +12,4 @@ node_modules
 ephox-*.tgz
 package-lock.json
 jenkins-plumbing
+.vscode
