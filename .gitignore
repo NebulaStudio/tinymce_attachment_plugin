@@ -4,7 +4,6 @@
 *.sublime-workspace
 .cache
 /lib
-/dist
 /scratch
 node_modules
 /config/repl
