@@ -6,6 +6,8 @@
 2. 支持上传的进度
 3. 支持拖拽上传，不影响原图片插件的拖拽
 
+![img](https://raw.githubusercontent.com/NebulaStudio/tinymce_attachment_plugin/master/attachment.gif)
+
 ### 如何使用
 
 使用此插件，需要关注 3 个参数配置
