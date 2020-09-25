@@ -39,14 +39,26 @@ const createFileInput = (fn: Function) => {
 };
 
 const uploadFile = (editor: any, file: any, fn: Function) => {
+  const maxSizeLimit =
+    editor.getParam('attachment_max_size') || 200 * 1024 * 1024;
+  if (file.size > maxSizeLimit) {
+    const maxSize = Utils.formatSize(maxSizeLimit);
+    editor.notificationManager.open({
+      text: `附件最大支持 ${maxSize}，超过 ${maxSize} 的附件将不会被上传。`,
+      type: 'warning',
+      timeout: 5000,
+    });
+    return;
+  }
   const uploadCallback = editor.getParam('attachment_upload_handler');
+  const assetPath = editor.getParam('attachment_assets_path') || 'icons';
   const id = editor.dom.uniqueId();
   const entityKey = `attachment_${id}`;
   const size = Utils.formatSize(file.size);
   const iconName = Icons.getFileIcon(file.name);
-  const iconPath = `icons/${iconName}`;
-  const loadingIconPath = 'icons/loading.gif';
-  const errorIconPath = 'icons/error.png';
+  const iconPath = `${assetPath}/${iconName}`;
+  const loadingIconPath = `${assetPath}/loading.gif`;
+  const errorIconPath = `${assetPath}/error.png`;
   let elm = ProgressData.create(editor, {
     id,
     icon: loadingIconPath,

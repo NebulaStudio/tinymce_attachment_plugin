@@ -4,7 +4,7 @@ const isImageFile = (name: string) => {
     return false;
   }
   const ext = name.substr(index);
-  return /.(gif|jpe?g|png)$/.test(ext);
+  return /.(gif|jpe?g|png)$/i.test(ext);
 };
 
 const formatSize = (bytes: number, decimals: number = 2) => {
