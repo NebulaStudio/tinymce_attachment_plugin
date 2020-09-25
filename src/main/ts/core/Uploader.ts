@@ -81,6 +81,7 @@ const uploadFile = (editor: any, file: any, fn: Function) => {
       icon: errorIconPath,
       title: file.name,
       size,
+      message,
     });
     fn(entityKey, elm);
   };

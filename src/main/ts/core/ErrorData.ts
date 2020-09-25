@@ -4,13 +4,14 @@ interface ErrorData {
   icon: string;
   title: string;
   size: string;
+  message: string;
 }
 
 const create = (editor: any, data: ErrorData) => {
   const icon = document.createElement('img');
   icon.setAttribute('src', data.icon);
   const display = document.createElement('span');
-  display.innerText = `上传失败 - ${data.title} (${data.size})`;
+  display.innerText = `${data.message} - ${data.title} (${data.size})`;
   const container = editor.dom.create('span', {
     class: 'attachment upload_error',
   });
