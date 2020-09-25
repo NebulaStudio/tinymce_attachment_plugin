@@ -12,7 +12,7 @@
 
 使用此插件，需要关注 4 个参数配置
 
-1. attachment_max_size: 可选参数，单个文件上传最大限制，单位 byte，默认 200 M
+#### 1. attachment_max_size: 可选参数，单个文件上传最大限制，单位 byte，默认 200 M
 
 示例： 限制上传大小为 100M
 
@@ -22,7 +22,7 @@ tinymce.init({
 });
 ```
 
-2. attachment_assets_path: 静态资源的路径，用于文件 icon 以及上传等待动画，上传错误的信息提示图标。PS: 静态资源位于项目的 /assets/icons 下。
+#### 2. attachment_assets_path: 静态资源的路径，用于文件 icon 以及上传等待动画，上传错误的信息提示图标。PS: 静态资源位于项目的 /assets/icons 下。
 
 示例:
 
@@ -32,7 +32,7 @@ tinymce.init({
 });
 ```
 
-3. attachment_upload_handler: 上传的回调函数。
+#### 3. attachment_upload_handler: 上传的回调函数。
 
 | 参数名           | 类型     | 说明                                       |
 | ---------------- | -------- | ------------------------------------------ |
@@ -62,8 +62,9 @@ tinymce.init({
 });
 ```
 
-4. 样式问题，在初始化 tinymce 的 content_css 对应的样式文件中，添加 css 代码
-   示例：如下配置文件
+#### 4. 在初始化 tinymce 的 content_css 对应的样式文件中，添加 css 代码。
+
+示例：如下配置文件
 
 ```
 tinymce.init({
