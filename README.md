@@ -10,7 +10,7 @@
 
 ### 如何使用
 
-使用此插件，需要关注 3 个参数配置
+使用此插件，需要关注 4 个参数配置
 
 1. attachment_max_size: 可选参数，单个文件上传最大限制，单位 byte，默认 200 M
 
@@ -60,6 +60,41 @@ tinymce.init({
         });
     }
 });
+```
+
+4. 样式问题，在初始化 tinymce 的 content_css 对应的样式文件中，添加 css 代码
+   示例：如下配置文件
+
+```
+tinymce.init({
+    content_css: 'tinymce/skins/content/snow/content.css',
+});
+```
+
+则需要在 tinymce/skins/content/snow/content.css 文件中添加如下 css 即可：
+
+```
+.attachment {
+    cursor: pointer !important;
+}
+.upload_error {
+    background: #FFE5E0;
+    border: 1px solid #EA644A;
+}
+.attachment > img {
+    width: 16px;
+    vertical-align: middle;
+    padding-right:4px;
+}
+.attachment > a {
+    text-decoration: none;
+    vertical-align: middle;
+}
+
+.attachment > span {
+    vertical-align: middle;
+    padding-right:4px;
+}
 ```
 
 ### 已知 BUG
