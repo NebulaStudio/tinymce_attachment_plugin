@@ -7,6 +7,7 @@ import * as AttachmentData from './AttachmentData';
 declare const document: any;
 
 const upload = (editor: any) => {
+  editor.focus();
   createFileInput((files: any) => {
     for (const file of files) {
       uploadFile(editor, file, (entityKey, elm) => {
